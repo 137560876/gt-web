@@ -1,0 +1,76 @@
+<template>
+  <div class="head">
+    <div class="img-container">
+      <img src="../../assets/img/logo.png" alt="">
+    </div>
+    <div class="menu-container">
+      <el-menu
+        :default-active="activeIndex"
+        class="el-menu-demo pad"
+        mode="horizontal"
+        @select="handleSelect"
+      >
+        <el-menu-item index="1">处理中心</el-menu-item>
+        <el-menu-item index="2">消息中心</el-menu-item>
+        <el-menu-item index="3">订单管理</el-menu-item>
+      </el-menu>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Header",
+  data() {
+    return {
+      activeIndex: "1",
+    };
+  },
+  methods: {
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    },
+  },
+};
+</script>
+
+<style>
+.pad {
+  padding-left: 500px !important;
+}
+
+.head {
+  position: relative;
+  display: flex;
+  width: 1140px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.img-container {
+  position: absolute;
+  left: 30px;
+  z-index: 50;
+}
+
+img {
+  height: 60px;
+  object-fit: contain;
+  margin-top: 14px;
+}
+
+.menu-container {
+  width: 100%;
+}
+
+.el-menu-item {
+  height: 80px !important;
+  line-height: 80px !important;
+  font-size: 18px !important;
+  color: #409eff !important;
+}
+
+.is-disabled {
+  opacity: 1;
+}
+</style>
