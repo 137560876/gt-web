@@ -37,8 +37,23 @@ export default {
     };
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+    handleSelect(key) {
+      switch (key) {
+        case "1":
+          this.$router.push({ path: "/main/home" });
+          break;
+        case "2":
+          this.$router.push({ path: "/main/home" });
+          break;
+        case "3":
+          this.$router.push({ path: "/main/home" });
+          break;
+        case "4":
+          this.$router.push({ path: "/main/option" });
+          break;
+        default:
+          break;
+      }
     },
     goHome() {
       this.$router.push({ path: "/main/home" });

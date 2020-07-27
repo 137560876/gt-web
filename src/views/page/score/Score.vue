@@ -32,7 +32,6 @@ export default {
 
 .score-img {
   width: 800px;
-  height: 3000px;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
