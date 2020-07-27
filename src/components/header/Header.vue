@@ -1,6 +1,6 @@
 <template>
   <div class="head">
-    <div class="img-container">
+    <div @click="goHome" class="img-container">
       <img src="../../assets/img/logo.png" alt />
     </div>
     <div class="avatar-container">
@@ -9,6 +9,8 @@
     <div class="menu-container">
       <el-menu
         :default-active="activeIndex"
+        active-text-color="#1989fa"
+        text-color="#8CC4FD"
         class="el-menu-demo pad"
         mode="horizontal"
         @select="handleSelect"
@@ -38,6 +40,9 @@ export default {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
+    goHome() {
+      this.$router.push({ path: "/main/home" });
+    },
   },
 };
 </script>
@@ -59,6 +64,7 @@ export default {
   position: absolute;
   left: 30px;
   z-index: 50;
+  cursor: pointer;
 }
 
 .avatar-container {
@@ -82,7 +88,6 @@ export default {
   height: 80px !important;
   line-height: 80px !important;
   font-size: 18px !important;
-  color: #409eff !important;
 }
 
 .is-disabled {

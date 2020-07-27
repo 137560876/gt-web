@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import './plugins/element.js'
 import './assets/global-less/global.less'
+import './plugins/ant-design-vue.js'
 
 Vue.config.productionTip = false
 

@@ -6,7 +6,9 @@
       </el-header>
       <el-main class="main-body">
         <vue-scroll :ops="ops">
-          <Home></Home>
+          <div class="page">
+            <router-view></router-view>
+          </div>
         </vue-scroll>
       </el-main>
     </el-container>
@@ -28,6 +30,7 @@ export default {
       ops: {
         rail: {
           gutterOfSide: "5px",
+          gutterOfEnds: null,
         },
         bar: {
           keepShow: true,
@@ -44,6 +47,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.page {
+  width: 1140px;
+  margin: 0 auto;
+}
+
 .main {
   height: 100%;
 }
