@@ -1,7 +1,10 @@
 <template>
   <div class="head">
     <div class="img-container">
-      <img src="../../assets/img/logo.png" alt="">
+      <img src="../../assets/img/logo.png" alt />
+    </div>
+    <div class="avatar-container">
+      <Avatar></Avatar>
     </div>
     <div class="menu-container">
       <el-menu
@@ -10,17 +13,22 @@
         mode="horizontal"
         @select="handleSelect"
       >
-        <el-menu-item index="1">处理中心</el-menu-item>
-        <el-menu-item index="2">消息中心</el-menu-item>
-        <el-menu-item index="3">订单管理</el-menu-item>
+        <el-menu-item index="1">钢琴谱</el-menu-item>
+        <el-menu-item index="2">吉他谱</el-menu-item>
+        <el-menu-item index="3">ukulele谱</el-menu-item>
+        <el-menu-item index="4">管理中心</el-menu-item>
       </el-menu>
     </div>
   </div>
 </template>
 
 <script>
+import Avatar from "../avatar/Avatar";
 export default {
   name: "Header",
+  components: {
+    Avatar,
+  },
   data() {
     return {
       activeIndex: "1",
@@ -53,7 +61,14 @@ export default {
   z-index: 50;
 }
 
-img {
+.avatar-container {
+  position: absolute;
+  left: 500px;
+  top: 10px;
+  z-index: 50;
+}
+
+.img-container img {
   height: 60px;
   object-fit: contain;
   margin-top: 14px;

@@ -13,6 +13,7 @@ export default {
   height: 3000px;
   width: 1140px;
   margin: 0 auto;
+  background: blue;
 }
 
 </style>
