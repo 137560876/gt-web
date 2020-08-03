@@ -12,6 +12,7 @@ import { Option } from 'element-ui'
 import { Radio } from 'element-ui'
 import { RadioGroup } from 'element-ui'
 import { Upload } from 'element-ui'
+import { RadioButton } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Container)
@@ -31,3 +32,4 @@ Vue.use(Option)
 Vue.use(Radio)
 Vue.use(RadioGroup)
 Vue.use(Upload)
+Vue.use(RadioButton)

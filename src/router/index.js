@@ -1,15 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from '../views/main/Main.vue'
+import Key from '../views/main/Key.vue'
 import Home from '../views/page/home/Home.vue'
 import Score from '../views/page/score/Score.vue'
 import Option from '../views/page/option/Option.vue'
+import MyKey from '../views/page/myKey/MyKey.vue'
 
 Vue.use(VueRouter)
 
 const routes = [{
   path: '/',
-  redirect: '/main'
+  redirect: '/mykey'
 }, {
   path: '/main',
   component: Main,
@@ -28,6 +30,13 @@ const routes = [{
       component: Option
     }
   ]
+}, {
+  path: '/mykey',
+  component: Key,
+  children: [{
+    path: '/',
+    component: MyKey
+  }]
 }]
 
 const router = new VueRouter({

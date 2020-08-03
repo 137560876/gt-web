@@ -29,31 +29,19 @@
 <script>
 const columns = [
   {
+    title: "歌曲名",
     dataIndex: "name",
     key: "name",
-    slots: { title: "customTitle" },
-    scopedSlots: { customRender: "name" },
   },
   {
-    title: "Age",
+    title: "曲谱类型",
     dataIndex: "age",
     key: "age",
   },
   {
-    title: "Address",
+    title: "上传时间",
     dataIndex: "address",
     key: "address",
-  },
-  {
-    title: "Tags",
-    key: "tags",
-    dataIndex: "tags",
-    scopedSlots: { customRender: "tags" },
-  },
-  {
-    title: "Action",
-    key: "action",
-    scopedSlots: { customRender: "action" },
   },
 ];
 
